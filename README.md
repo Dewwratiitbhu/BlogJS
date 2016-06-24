@@ -1,1 +1,2 @@
 # BlogJS
+Training project
