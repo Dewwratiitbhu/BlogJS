@@ -18,7 +18,7 @@ function logoutAction(event) {
   });
   window.localStorage.removeItem("tokenData");
   localStorage.clear();
-  window.location.replace("http://localhost:8080/test");
+  window.location.replace("../");
 } 
 
 function alertAction(event,address){
@@ -125,5 +125,5 @@ function printBlogById(json_obj){
     "<p>" + json_obj.blog_body + "</p><br><br>" );
 }
 function submitAction(event){
-  window.location.replace("../ ../server/");
+  window.location.replace("../../server/");
 }
