@@ -36,7 +36,7 @@ function alertAction(event,address){
       printBlog(data);
     },
     error: function(error){
-          debugger
+          
     }
   });
 }
@@ -66,7 +66,7 @@ $(document).ready(function(){
       printCategories(data);
     },
     error: function(error){
-          debugger
+          
     }
   });
   $.ajax({
@@ -82,7 +82,7 @@ $(document).ready(function(){
       printBlog(data);
     },
     error: function(error){
-          debugger
+          
     }
   });
 });
@@ -111,7 +111,7 @@ function openBlogAction(event,blog_id){
       printBlogById(data);
     },
     error: function(error){
-          debugger
+          
     }
   });
 }

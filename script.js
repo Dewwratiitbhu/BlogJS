@@ -46,7 +46,7 @@ function registerAction(){
     var JSONObject= {"username":username,"email":email, "password":password };   
     if(isEmail(email)){
         var request = $.ajax({
-            url: "http://192.168.9.70:8085/api/accounts/register",
+            url: "http://54.191.251.207:8085/api/accounts/register",
             type: "post",
             data: JSON.stringify(JSONObject),
             contentType: "json",
@@ -54,11 +54,11 @@ function registerAction(){
                 "Content-Type": 'application/json'
             },
             success: function (data) {
-                debugger
+                
                 console.log(data);
             },
             error: function(error){
-              debugger
+              
             }
         });
     }
