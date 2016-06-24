@@ -16,9 +16,9 @@ function logoutAction(event) {
   }).error(function(res) {
     console.log(res);   
   });
-  window.location.replace("http://localhost:8080/test");
   window.localStorage.removeItem("tokenData");
-  window.alert("You are loggedout");
+  localStorage.clear();
+  window.location.replace("http://localhost:8080/test");
 } 
 
 function alertAction(event,address){
@@ -124,4 +124,6 @@ function printBlogById(json_obj){
     "<p><img src=\"" + baseUrl + json_obj.image_path + "\" align=\"center\" style=\"width:304px; height:228px;\"></p>" +
     "<p>" + json_obj.blog_body + "</p><br><br>" );
 }
-
+function submitAction(event){
+  window.location.replace("../ ../server/");
+}

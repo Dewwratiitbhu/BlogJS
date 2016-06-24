@@ -22,11 +22,11 @@ function loginAction(event){
         success: function (data) {
             console.log(data);
             json_obj=data;
-            tokenData=json_obj['token'];
-            messageData=json_obj['message'];
             if (typeof(Storage) !== "undefined") {
-                localStorage.setItem("tokenData", tokenData);
-                localStorage.setItem("messageData",messageData);
+                localStorage.setItem("tokenData", json_obj['token']);
+                localStorage.setItem("messageData",json_obj['message']);
+                localStorage.setItem("user_id",json_obj['data'][0]['user_id']);
+                localStorage.setItem("role",json_obj['data'][0]['role']);
                 window.location.href='testblogCategory/index.html';
             } 
             else {
@@ -87,6 +87,6 @@ function logoutAction(event) {
   }).error(function(res) {
     console.log(res);   
   });
-  window.localStorage.removeItem("tokenData");
-  window.alert("You are loggedout");
+  window.localStorage.clear();
+ 
 } 
